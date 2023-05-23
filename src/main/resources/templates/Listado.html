@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>Registro de clientes</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<!-- ACA EMPIEZA EL CONTENIDO DENTRO DE LA PAGINA -->
+	<table class="table table-hover" id="myTable">
+		<thead>
+			<tr>
+				<th scope="col">Código</th>
+				<th scope="col">Titulo</th>
+				<th scope="col">Precio</th>
+				<th scope="col">Ejemplarres</th>
+				<th scope="col">Origen</th>
+				<th scope="col">Tema</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<th></th>
+			<tr th:each="p: ${lstProds}">
+				<td th:text="${p.codlibro}"></td>
+				<td th:text="${p.titulo}"></td>
+				<td th:text="${p.precio}"></td>
+				<td th:text="${p.ejemplares}"></td>
+				<td th:text="${p.origen}"></td>
+				<td th:text="${p.codtema}"></td>
+		</tbody>
+	</table>
+</body>
+
+</html>
